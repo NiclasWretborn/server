@@ -2,7 +2,7 @@
 	$imgFolder = '/mnt/mypassport/images/Skog/';
 	$imgNames = array();
   
-  if ($handle = opendir('.')) {
+  if ($handle = opendir('/mnt/mypassport/images/Skog/')) {
 
     while (false !== ($entry = readdir($handle))) {
 
