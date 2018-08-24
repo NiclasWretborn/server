@@ -1,0 +1,710 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vibrationskalkylator</title>
+  <style>
+    input[type=text], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  width: 100px;
+  outline: none;
+  position: absolute;
+  position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center; /* not part of solution */
+
+  border-radius: 3px;
+  margin-top: 6px;
+  border: 1px solid #DDDDDD;
+}
+ label {
+  position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center; /* not part of solution */
+   margin-top: -11px;
+   
+ }
+ 
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px #02d9e9;
+  border: 1px solid #02d9e9;
+}
+.columntitle{
+  display: inline-block;
+  position: absolute;
+	text-align: center; /* not part of solution */
+  height: 20px; 
+  text-align: center; 
+  font-family: arial; 
+  color: #00874f; 
+  font-size: 19px; 
+  font-weight: normal; 
+  cursor: default;
+  width:138px;
+  
+}
+
+.row {
+ 
+  width:138px;
+  height: 36px;
+  position: relative;
+  
+}
+.column {
+  display: inline-block; 
+  width: 140px; 
+  height: 250px; 
+  border-radius: 3px;
+  border: 1px solid grey;
+  background-color: white;
+}
+
+.field {
+  display: inline-block; 
+  border-radius: 3px;
+  width: 599px; 
+  height: 293px; 
+  border: 1px solid grey;
+  background-color: rgb(245, 245, 245);
+}
+.text {
+  font-family: arial;
+  color: black;
+  font-size: 12px;
+ 
+}
+  </style>
+</head>
+<body style="margin: 0;">
+  
+    <div style="width: 600px; height: 700px; background-color: rgba(211, 211, 211, 0.548); border: 1px solid darkgrey; border-radius: 10px;">
+      <div id="Header" style="height:70px; width: 600px;">
+        <div id="textdiv" style="font-family: arial; display: inline-block; color: #00874f; font-size: 44px; font-weight: bold; margin-left: 80px; cursor: default;">
+        Vibrationskalkylator
+      </div>
+  </div>
+    <div id="body" style="background-color: rgba(211, 211, 211, 0.548); width:600px; height: 590px;">
+<div id="inputdiv" class="field" style="border-bottom: none;">
+<div id="input" style="text-align: center; margin-left: 3px; width: 590px; height: 30px; font-family: arial; display: inline-block; color: #00874f; font-size: 30px; font-weight: bold; cursor: default;">
+Input
+</div>
+<div id="iFrekvens" class="column" style="margin-left:6px;">
+ <div id="columntitle" class="columntitle">
+Frekvens
+</div>
+    <div class="row" style="margin-top: 20px;">
+         <label class="text" for="name">Hz</label>
+    <input class="input0" type="text" name="name" id="hz" value="">
+
+    </div>
+    <div class=row>
+        <label class="text" for="name">RPM</label>
+        <input class="input0" type="text" name="name" id="rpm" value="">
+        
+    </div>
+</div>
+<div id="iHastighet" class="column">
+    <div id="columntitle" class="columntitle">
+        Hastighet
+        </div>
+    <div class=row style="margin-top: 20px;">
+        <label class="text" for="name">in/s pk</label>
+          <input class="input1" type="text" name="name" id="inspk" value="">
+      </div>
+      <div class=row>
+        <label class="text" for="name">in/s p-p</label>
+          <input class="input1" type="text" name="name" id="inspp" value="">
+      </div>
+      <div class=row>
+        <label class="text" for="name">in/s rms</label>
+          <input class="input1" type="text" name="name" id="insrms" value="">
+      </div>
+      <div class=row>
+        <label class="text" for="name">mm/s pk</label>
+          <input class="input1" type="text" name="name" id="mmspk" value="">
+      </div>
+      <div class=row>
+        <label class="text" for="name">mm/s p-p</label>
+          <input class="input1" type="text" name="name" id="mmspp" value="">
+      </div>
+      <div class=row>
+        <label class="text" for="name">mm/s rms</label>
+          <input class="input1" type="text" name="name" id="mmsrms" value="">
+      </div>
+</div>
+<div id="iAcceleration" class="column">
+    <div id="columntitle" class="columntitle">
+        Acceleration
+        </div>
+    <div class=row style="margin-top: 20px;">
+      <label class="text" for="name">g pk</label>
+        <input class="input2" type="text" name="name" id="gpk" value="">
+    </div>
+    <div class=row>
+      <label class="text" for="name">g p-p</label>
+        <input class="input2" type="text" name="name" id="gpp" value="">
+    </div>
+    <div class=row>
+      <label class="text" for="name">g rms</label>
+        <input class="input2" type="text" name="name" id="grms" value="">
+    </div>
+    <div class=row>
+      <label class="text" for="name">m/s&sup2 pk</label>
+        <input class="input2" type="text" name="name" id="ms2pk" value="">
+    </div>
+    <div class=row>
+      <label class="text" for="name">m/s&sup2 p-p</label>
+        <input class="input2" type="text" name="name" id="ms2pp" value="">
+    </div>
+    <div class=row>
+      <label class="text" for="name">m/s&sup2 rms</label>
+        <input class="input2" type="text" name="name" id="ms2rms" value="">
+    </div>
+</div>
+<div id="iFörflyttning" class="column">
+    <div id="columntitle" class="columntitle">
+        Förflyttning
+        </div>
+    <div class=row style="margin-top: 20px;">
+        <div class=row>
+            <label class="text" for="name">in pk</label>
+              <input class="input3" type="text" name="name" id="inpk" value="">
+          </div>
+    </div>
+    <div class=row>
+        <label class="text" for="name">in p-p</label>
+        <input class="input3" type="text" name="name" id="inpp" value="">
+    </div>
+    <div class=row>
+        <label class="text" for="name">in rms</label>
+        <input class="input3" type="text" name="name" id="inrms" value="">
+    </div>
+    <div class=row>
+        <label class="text" for="name">mm pk</label>
+        <input class="input3" type="text" name="name" id="mmpk" value="">
+    </div>
+    <div class=row>
+        <label class="text" for="name">mm p-p</label>
+        <input class="input3" type="text" name="name" id="mmpp" value="">
+    </div>
+    <div class=row>
+        <label class="text" for="name">mm rms</label>
+        <input class="input3" type="text" name="name" id="mmrms" value="">
+    </div>
+</div>
+</div>
+<div id="outputdiv" class="field">
+<div id="output" style="text-align: center; margin-left: 3px; width: 590px; height: 30px; font-family: arial; display: inline-block; color: #00874f; font-size: 30px; font-weight: bold; cursor: default;">
+Resultat
+</div>
+<div id="oFrekvens" style="margin-left:6px;" class="column">
+    <div id="columntitle" class="columntitle">
+        Frekvens
+        </div>
+    <div class=row style="margin-top: 20px;">
+        <label class="text" for="name">Hz</label>
+   <input type="text" name="name" id="ohz" value="" disabled="disabled">
+
+   </div>
+   <div class=row>
+       <label class="text" for="name">RPM</label>
+       <input type="text" name="name" id="orpm" value="" disabled="disabled">
+       
+   </div>
+</div>
+<div id="oHastighet" class="column">
+    <div id="columntitle" class="columntitle">
+        Hastighet
+        </div>
+    <div class=row style="margin-top: 20px;">
+        <label class="text" for="name">in/s pk</label>
+          <input type="text" name="name" id="oinspk" value="" disabled="disabled">
+      </div>
+      <div class=row>
+        <label class="text" for="name">in/s p-p</label>
+          <input type="text" name="name" id="oinspp" value="" disabled="disabled">
+      </div>
+      <div class=row>
+        <label class="text" for="name">in/s rms</label>
+          <input type="text" name="name" id="oinsrms" value="" disabled="disabled">
+      </div>
+      <div class=row>
+        <label class="text" for="name">mm/s pk</label>
+          <input type="text" name="name" id="ommspk" value="" disabled="disabled">
+      </div>
+      <div class=row>
+        <label class="text" for="name">mm/s p-p</label>
+          <input type="text" name="name" id="ommspp" value="" disabled="disabled">
+      </div>
+      <div class=row>
+        <label class="text" for="name">mm/s rms</label>
+          <input type="text" name="name" id="ommsrms" value="" disabled="disabled">
+      </div>
+</div>
+<div id="oAcceleration" class="column">
+    <div id="columntitle" class="columntitle">
+        Acceleration
+        </div>
+    <div class=row style="margin-top: 20px;">
+        <label class="text" for="name">g pk</label>
+          <input type="text" name="name" id="ogpk" value="" disabled="disabled">
+      </div>
+      <div class=row>
+        <label class="text" for="name">g p-p</label>
+          <input type="text" name="name" id="ogpp" value="" disabled="disabled">
+      </div>
+      <div class=row>
+        <label class="text" for="name">g rms</label>
+          <input type="text" name="name" id="ogrms" value="" disabled="disabled">
+      </div>
+      <div class=row>
+        <label class="text" for="name">m/s&sup2 pk</label>
+          <input type="text" name="name" id="oms2pk" value="" disabled="disabled">
+      </div>
+      <div class=row>
+        <label class="text" for="name">m/s&sup2 p-p</label>
+          <input type="text" name="name" id="oms2pp" value="" disabled="disabled">
+      </div>
+      <div class=row>
+        <label class="text" for="name">m/s&sup2 rms</label>
+          <input type="text" name="name" id="oms2rms" value="" disabled="disabled">
+      </div>
+</div>
+<div id="oFörflyttning" class="column">
+    <div id="columntitle" class="columntitle">
+        Förflyttning
+        </div>
+    <div class=row style="margin-top: 20px;">
+        <div class=row>
+            <label class="text" for="name">in pk</label>
+              <input type="text" name="name" id="oinpk" value="" disabled="disabled">
+          </div>
+    </div>
+    <div class=row>
+        <label class="text" for="name">in p-p</label>
+        <input type="text" name="name" id="oinpp" value="" disabled="disabled">
+    </div>
+    <div class=row>
+        <label class="text" for="name">in rms</label>
+        <input type="text" name="name" id="oinrms" value="" disabled="disabled">
+    </div>
+    <div class=row>
+        <label class="text" for="name">mm pk</label>
+        <input type="text" name="name" id="ommpk" value="" disabled="disabled">
+    </div>
+    <div class=row>
+        <label class="text" for="name">mm p-p</label>
+        <input type="text" name="name" id="ommpp" value="" disabled="disabled">
+    </div>
+    <div class=row>
+        <label class="text" for="name">mm rms</label>
+        <input type="text" name="name" id="ommrms" value="" disabled="disabled">
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+      
+      
+      <div id="footer" style="height:50px; margin-top: -4px;">
+      </div>
+      <a onclick="window.open(document.URL, '_blank', 'location=yes,height=702,width=602,scrollbars=no,status=yes');">
+    X
+  </a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+
+
+    <script type="text/javascript">
+$( ".input0, .input1, .input2, .input3" ).on("keypress keyup blur",function (event) {
+            //this.value = this.value.replace(/[^0-9\.]/g,'');
+     $(this).val($(this).val().replace(/[^0-9\.]/g,''));
+            if ((event.which != 46 || $(this).val().indexOf('.')  != -1) && (event.which < 48 || event.which > 57) && (event.which < 7 || event.which > 10) && (event.which < 36 || event.which > 40)) {
+                event.preventDefault();
+            }
+        var inputs = document.querySelectorAll("input.input0, input.input1, input.input2, input.input3");
+        var inputs0 = document.querySelectorAll(".input0");
+        var inputs1 = document.querySelectorAll(".input1");
+        var inputs2 = document.querySelectorAll(".input2");
+        var inputs3 = document.querySelectorAll(".input3");
+     
+        var noAktiva = 0;
+        var noAktivaCol = 0;
+
+
+ //Frekvens
+ document.getElementById('ohz').value = 0;
+ document.getElementById('orpm').value = 0;
+
+//Hastighet
+document.getElementById('oinspk').value = 0;
+document.getElementById('oinspp').value = 0;
+document.getElementById('oinsrms').value = 0;
+document.getElementById('ommspk').value = 0;
+document.getElementById('ommspp').value = 0;
+document.getElementById('ommsrms').value = 0;
+
+//Acceleration
+document.getElementById('ogpk').value = 0;
+document.getElementById('ogpp').value = 0;
+document.getElementById('ogrms').value = 0;
+document.getElementById('oms2pk').value = 0;
+document.getElementById('oms2pp').value = 0;
+document.getElementById('oms2rms').value = 0;
+
+//Förflyttning
+document.getElementById('oinpk').value = 0;
+document.getElementById('oinpp').value = 0;
+document.getElementById('oinrms').value = 0;
+document.getElementById('ommpk').value = 0;
+document.getElementById('ommpp').value = 0;
+document.getElementById('ommrms').value = 0;
+        
+        for(var j = 0; j < inputs0.length; j++) {
+        if (inputs0[j].value != ""){
+          noAktivaCol += 1;
+        }
+    }
+
+    if(noAktivaCol >= 1){
+      for(var j = 0; j < inputs0.length; j++) {
+        if (inputs0[j].value == ""){
+          inputs0[j].disabled = true;
+        }
+
+    }
+    }
+    else{
+      for(var j = 0; j < inputs0.length; j++) {
+        if (inputs0[j].value == ""){
+          inputs0[j].disabled = false;
+        }
+
+    }
+    }
+    noAktivaCol = 0
+    for(var j = 0; j < inputs1.length; j++) {
+        if (inputs1[j].value != ""){
+          noAktivaCol += 1;
+          
+        }
+    }
+
+    if(noAktivaCol >= 1){
+      for(var j = 0; j < inputs1.length; j++) {
+        if (inputs1[j].value == ""){
+          inputs1[j].disabled = true;
+        }
+
+    }
+    }
+    else{
+      for(var j = 0; j < inputs1.length; j++) {
+        if (inputs1[j].value == ""){
+          inputs1[j].disabled = false;
+        }
+
+    }
+    }
+    noAktivaCol = 0
+    for(var j = 0; j < inputs2.length; j++) {
+        if (inputs2[j].value != ""){
+          noAktivaCol += 1;
+          
+        }
+    }
+
+    if(noAktivaCol >= 1){
+      for(var j = 0; j < inputs2.length; j++) {
+        if (inputs2[j].value == ""){
+          inputs2[j].disabled = true;
+        }
+
+    }
+    }
+    else{
+      for(var j = 0; j < inputs2.length; j++) {
+        if (inputs2[j].value == ""){
+          inputs2[j].disabled = false;
+        }
+
+    }
+    }
+    noAktivaCol = 0
+
+    for(var j = 0; j < inputs3.length; j++) {
+        if (inputs3[j].value != ""){
+          noAktivaCol += 1;
+          
+        }
+    }
+
+    if(noAktivaCol >= 1){
+      for(var j = 0; j < inputs3.length; j++) {
+        if (inputs3[j].value == ""){
+          inputs3[j].disabled = true;
+        }
+
+    }
+    }
+    else{
+      for(var j = 0; j < inputs3.length; j++) {
+        if (inputs3[j].value == ""){
+          inputs3[j].disabled = false;
+        }
+
+    }
+    }
+  
+  
+    for(var j = 0; j < inputs.length; j++) {
+        if (inputs[j].value != ""){
+          noAktiva += 1;
+        }
+
+    }
+
+    if(noAktiva >= 2){
+      for(var j = 0; j < inputs.length; j++) {
+        if (inputs[j].value == ""){
+          inputs[j].disabled = true;
+         
+        }
+
+    }
+    
+    }
+    else{
+      for(var j = 0; j < inputs.length; j++) {
+        if (inputs[j].value == "" && inputs[j].disabled != true){
+          inputs[j].disabled = false;
+          
+        }
+
+    }
+    }
+
+
+
+
+    
+  var bCol0 = false
+  var bCol1 = false
+  var bCol2 = false
+  var bCol3 = false
+
+    //Column0 Frekvens
+
+    if(document.getElementById('hz').value != ""){
+      document.getElementById('ohz').value = (document.getElementById('hz').value);
+      bCol0 = true
+    }
+    if(document.getElementById('rpm').value != ""){
+      document.getElementById('ohz').value = Math.round((document.getElementById('rpm').value/60) * 100) / 100;
+      bCol0 = true
+    }
+
+    //Column1 Hastighet
+
+    if(document.getElementById('inspk').value != ""){
+      document.getElementById('oinspk').value = (document.getElementById('inspk').value);
+      bCol1 = true
+    }
+    if(document.getElementById('inspp').value != ""){
+      document.getElementById('oinspk').value = Math.round((document.getElementById('inspp').value/2) * 100) / 100;
+      bCol1 = true
+    }
+    if(document.getElementById('insrms').value != ""){
+      document.getElementById('oinspk').value = Math.round((document.getElementById('insrms').value * Math.SQRT2) * 100) / 100;
+      bCol1 = true
+    }
+    if(document.getElementById('mmspk').value != ""){
+      document.getElementById('oinspk').value = Math.round((document.getElementById('mmspk').value/25.4) * 100) / 100;
+      bCol1 = true
+    }
+    if(document.getElementById('mmspp').value != ""){
+      document.getElementById('oinspk').value = Math.round((document.getElementById('mmspp').value/(25.4*2)) * 100) / 100;
+      bCol1 = true
+    }
+    if(document.getElementById('mmsrms').value != ""){
+      document.getElementById('oinspk').value = Math.round(((document.getElementById('mmsrms').value/25.4) * Math.SQRT2) * 100) / 100;
+      bCol1 = true
+    }
+
+    //Column2 Acceleration
+
+    if(document.getElementById('gpk').value != ""){
+      document.getElementById('ogpk').value = (document.getElementById('gpk').value);
+      bCol2 = true
+    }
+    if(document.getElementById('gpp').value != ""){
+      document.getElementById('ogpk').value = Math.round((document.getElementById('gpp').value/2) * 100) / 100;
+      bCol2 = true
+    }
+    if(document.getElementById('grms').value != ""){
+      document.getElementById('ogpk').value = Math.round((document.getElementById('grms').value * Math.SQRT2) * 100) / 100;
+      bCol2 = true
+    }
+    if(document.getElementById('ms2pk').value != ""){
+      document.getElementById('ogpk').value = Math.round((document.getElementById('ms2pk').value/9.80665) * 100) / 100;
+      bCol2 = true
+    }
+    if(document.getElementById('ms2pp').value != ""){
+      document.getElementById('ogpk').value = Math.round((document.getElementById('ms2pp').value/(9.80665*2)) * 100) / 100;
+      bCol2 = true
+    }
+    if(document.getElementById('ms2rms').value != ""){
+      document.getElementById('ogpk').value = Math.round((document.getElementById('ms2rms').value/(9.80665/ Math.SQRT2)) * 100) / 100;
+      bCol2 = true
+    }
+
+    //Column3 Förflyttning
+
+    if(document.getElementById('inpk').value != ""){
+      document.getElementById('oinpk').value = (document.getElementById('inpk').value);
+      bCol3 = true
+    }
+    if(document.getElementById('inpp').value != ""){
+      document.getElementById('oinpk').value = Math.round((document.getElementById('inpp').value/2) * 100) / 100;
+      bCol3 = true
+    }
+    if(document.getElementById('inrms').value != ""){
+      document.getElementById('oinpk').value = Math.round((document.getElementById('inrms').value * Math.SQRT2) * 100) / 100;
+      bCol3 = true
+    }
+    if(document.getElementById('mmpk').value != ""){
+      document.getElementById('oinpk').value = Math.round((document.getElementById('mmpk').value/25.4) * 100) / 100;
+      bCol3 = true
+    }
+    if(document.getElementById('mmpp').value != ""){
+      document.getElementById('oinpk').value = Math.round((document.getElementById('mmpp').value/(25.4*2)) * 100) / 100;
+      bCol3 = true
+    }
+    if(document.getElementById('mmrms').value != ""){
+      document.getElementById('oinpk').value = Math.round(((document.getElementById('mmrms').value/25.4) * Math.SQRT2) * 100) / 100;
+      bCol3 = true
+    }
+
+//Matematik https://www.spaceagecontrol.com/calcsinm.htm
+
+
+//Frekvens och Hastighet
+if(bCol0 == true && bCol1 == true){
+  var F = document.getElementById('ohz').value;
+  var V = document.getElementById('oinspk').value;
+  var A = (2 * Math.PI * F * V)/386.0885827;
+  document.getElementById('ogpk').value = A;
+  var D = V/(Math.PI * F * 2);
+  document.getElementById('oinpk').value = D;
+}
+
+//Frekvens och Acceleration
+if(bCol0 == true && bCol2 == true){
+  var F = document.getElementById('ohz').value;
+  var A = document.getElementById('ogpk').value;
+  var V = (386.0885827 * A)/(2 * Math.PI * F);
+  document.getElementById('oinspk').value = V;
+  var D = (386.0885827 * A)/Math.pow((2 * Math.PI * F),2);
+  document.getElementById('oinpk').value = D;
+}
+
+//Frekvens och Förflyttning
+if(bCol0 == true && bCol3 == true){
+  var F = document.getElementById('ohz').value;
+  var D = document.getElementById('oinpk').value;
+  var A = (4*Math.PI * Math.PI * F * F * D)/386.0885827;
+  document.getElementById('ogpk').value = A;
+  var V = Math.PI * F * D * 2;
+  document.getElementById('oinspk').value = V;
+}
+
+//Hastighet och Acceleration
+if(bCol1 == true && bCol2 == true){
+  var V = document.getElementById('oinspk').value;
+  var A = document.getElementById('ogpk').value;
+  var F = (386.0885827 * A)/(2 * Math.PI * V);
+  document.getElementById('ohz').value = F;
+  var D = (V * V)/(386.0885827 * A);
+  document.getElementById('oinpk').value = D;
+}
+
+//Hastighet och Förflyttning
+if(bCol1 == true && bCol3 == true){
+  var V = document.getElementById('oinspk').value;
+  var D = document.getElementById('oinpk').value;
+  var F = V/(Math.PI * 2 * D);
+  document.getElementById('ohz').value = F;
+  var A = (V * V)/(D * 386.0885827);
+  document.getElementById('ogpk').value = A;
+}
+
+//Acceleration och Förflyttning
+if(bCol2 == true && bCol3 == true){
+  var A = document.getElementById('ogpk').value;
+  var D = document.getElementById('oinpk').value;
+  var F = Math.pow(((386.0885827 * A)/(2*2*Math.PI*Math.PI*D)),0.5);
+  document.getElementById('ohz').value = F;
+  var V = Math.pow((386.0885827 * A * D), 0.5);
+  document.getElementById('oinspk').value = V;
+}
+
+
+
+
+
+
+
+            //Frekvens
+            document.getElementById('orpm').value = Math.round((document.getElementById('ohz').value * 60) * 100)/ 100;
+
+            //Hastighet
+            document.getElementById('oinspp').value = Math.round((document.getElementById('oinspk').value * 2) * 100)/ 100;
+            document.getElementById('oinsrms').value = Math.round((document.getElementById('oinspk').value/Math.SQRT2) * 100)/ 100;
+            document.getElementById('ommspk').value = Math.round((document.getElementById('oinspk').value * 25.4) * 100)/ 100;
+            document.getElementById('ommspp').value = Math.round((document.getElementById('ommspk').value * 2) * 100)/ 100;
+            document.getElementById('ommsrms').value = Math.round((document.getElementById('ommspk').value/Math.SQRT2) * 100)/ 100;
+
+            //Acceleration
+            document.getElementById('ogpp').value = Math.round((document.getElementById('ogpk').value * 2) * 100)/ 100;
+            document.getElementById('ogrms').value = Math.round((document.getElementById('ogpk').value/Math.SQRT2) * 100)/ 100;
+            document.getElementById('oms2pk').value = Math.round((document.getElementById('ogpk').value * 9.80665) * 100)/ 100;
+            document.getElementById('oms2pp').value = Math.round((document.getElementById('ogpk').value * 9.80665) * 2 * 100)/ 100;
+            document.getElementById('oms2rms').value = Math.round(((document.getElementById('ogpk').value * 9.80665)/Math.SQRT2) * 100)/ 100;
+
+            //Förflyttning
+            document.getElementById('oinpp').value = Math.round((document.getElementById('oinpk').value * 2) * 100)/ 100;
+            document.getElementById('oinrms').value = Math.round((document.getElementById('oinpk').value/Math.SQRT2) * 100)/ 100;
+            document.getElementById('ommpk').value = Math.round((document.getElementById('oinpk').value * 25.4) * 100)/ 100;
+            document.getElementById('ommpp').value = Math.round((document.getElementById('ommpk').value * 2) * 100)/ 100;
+            document.getElementById('ommrms').value = Math.round((document.getElementById('ommpk').value/Math.SQRT2) * 100)/ 100;
+        
+
+document.getElementById('ohz').value = Math.round(document.getElementById('ohz').value * 100)/100
+document.getElementById('oinspk').value = Math.round(document.getElementById('oinspk').value * 100)/100
+document.getElementById('ogpk').value = Math.round(document.getElementById('ogpk').value * 100)/100
+document.getElementById('oinpk').value = Math.round(document.getElementById('oinpk').value * 100)/100
+
+
+        });
+    </script>
+
+</body>
+</html>

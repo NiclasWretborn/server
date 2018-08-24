@@ -1,0 +1,196 @@
+/*
+Color scheme(from light to dark)
+1. #.....
+*/
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: #ffffff url("../img/Splash.jpg");
+  background-size: cover;
+}
+
+.header.logo{
+  background-image: url("../img/logo.png");
+  width: 10.7rem;
+  height: 2.44rem;
+  background-size: cover;
+  margin-left: 10%;
+  margin-top: 1%;
+  display: inline-block;
+}
+
+.overlay.logo{
+  background-image: url("../img/logohover.png");
+  width: 10.7rem;
+  height: 2.44rem;
+  background-size: cover;
+  opacity: 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.header.logo:hover .overlay.logo {
+  opacity: 1;
+}
+
+.header.about{
+  background-image: url("../img/about.png");
+  width: 120px;
+  height: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 45%;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.overlay.about{
+  background-image: url("../img/abouthover.png");
+  width: 120px;
+  height: 30px;
+  background-size: cover;
+  opacity: 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.header.about:hover .overlay.about {
+  opacity: 1;
+}
+
+.header.privacypolicy{
+  background-image: url("../img/privacypolicy.png");
+  width: 206px;
+  height: 30px;
+  margin-left: 5%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.overlay.privacypolicy{
+  background-image: url("../img/privacypolicyhover.png");
+  width: 206px;
+  height: 30px;
+  background-size: cover;
+  opacity: 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.header.privacypolicy:hover .overlay.privacypolicy {
+  opacity: 1;
+}
+
+.header.help{
+  background-image: url("../img/help.png");
+  width: 70px;
+  height: 30px;
+  margin-left: 5%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.overlay.help{
+  background-image: url("../img/helphover.png");
+  width: 70px;
+  height: 30px;
+  background-size: cover;
+  opacity: 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.header.help:hover .overlay.help {
+  opacity: 1;
+}
+
+.g-signin2{
+  width: 100%;
+}
+
+.g-signin2 > div{
+  margin: 0 auto;
+}
+
+.index.title{
+  background-image: url("../img/title.png");
+  width: 933px;
+  height: 56px;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15%;
+  overflow: hidden;
+}
+
+.index.text{
+  background-image: url("../img/text.png");
+  width: 755px;
+  height: 79px;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+}
+#indexwrapper{
+  text-align: center;
+}
+.index.signup{
+  background-image: url("../img/signup.png");
+  width: 165px;
+  height: 60px;
+  background-size: cover;
+  margin: 2rem;
+  margin-top: 3%;
+  display: inline-block;
+  cursor: pointer;
+}
+.overlay.signup{
+  background-image: url("../img/signuphover.png");
+  width: 165px;
+  height: 60px;
+  background-size: cover;
+  opacity: 0;
+
+  display: inline-block;
+  cursor: pointer;
+}
+
+.index.signup:hover .overlay.signup {
+  opacity: 1;
+}
+
+.index.signin{
+  background-image: url("../img/signin.png");
+  width: 165px;
+  height: 60px;
+  background-size: cover;
+  margin: 2rem;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.overlay.signin{
+  background-image: url("../img/signinhover.png");
+  width: 165px;
+  height: 60px;
+  background-size: cover;
+
+  opacity: 0;
+
+  display: inline-block;
+  cursor: pointer;
+}
+
+.index.signin:hover .overlay.signin {
+  opacity: 1;
+}

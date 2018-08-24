@@ -1,0 +1,118 @@
+/*
+Color scheme(from light to dark)
+1. #.....
+*/
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+p{
+  position: absolute;
+  margin-top: 3rem;
+}
+
+.square{
+  font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  color: white;
+  font-size: 2.5rem;
+  width: 11rem;
+  height:11rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  border-radius: 15px;
+  transition: all 0.4s ease-in-out;
+}
+
+.square:hover{
+  -moz-transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+  cursor: default;
+}
+
+#nohover:hover{
+  -moz-transform: scale(1.0);
+  -webkit-transform: scale(1.0);
+  transform: scale(1.0);
+}
+
+.column{
+  display: inline-block;
+}
+
+.grid{
+  text-align: center;
+  margin: 1rem;
+}
+
+.outer {
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#campsite{
+  border: 1px solid white;
+  background-image: url("../img/campsite.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#rvtrading{
+  border: 1px solid white;
+  background-image: url("../img/rvtrading.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#wretborndesign{
+  border: 1px solid white;
+  background-image: url("../img/wretborndesign.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#parkhotell{
+  border: 1px solid white;
+  background-image: url("../img/parkhotell.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#backpack{
+  border: 1px solid white;
+  background-image: url("../img/backpack.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#wifinder{
+  border: 1px solid white;
+  background-image: url("../img/wifinder.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#vibrationskalkylator{
+  border: 1px solid white;
+  background-image: url("../img/vibrationskalkylator.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
