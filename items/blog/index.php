@@ -1,5 +1,5 @@
 <?php
-	$imgFolder = 'img/';
+	$imgFolder = '/mnt/mypassport/images/Skog/';
 	$imgNames = array();
   
   if ($handle = opendir('.')) {
