@@ -37,28 +37,22 @@ $numImages = count($imgNames);
             }
             echo "];\n"
           ?>
-          
+        
+  var allImages = "";
+  
           for (i=0; i<numImages; i++)
           {
-            img = document.createElement('img');
-            img.src = imgNames[i];
-            img.setAttribute('width', '440');
-            img.setAttribute('height', '500');
-            document.body.appendChild(img);
+            var width = getRandomSize(200, 400);
+    var height =  getRandomSize(200, 400);
+    allImages += '<img src="<?php echo "'$imgFolder$imgNames[$i]'"; ?>" alt="">';
           }
+          $('#photos').append(allImages);
           function getRandomSize(min, max) {
     return Math.round(Math.random() * (max - min) + min);
   }
-  var numImages = <?php echo $numImages; ?>;
-  var allImages = "";
   
-  for (var i = 0; i < numImages; i++) {
-    var width = getRandomSize(200, 400);
-    var height =  getRandomSize(200, 400);
-    allImages += '<img src="<?php echo "'$imgFolder$imgNames[$i]'"; ?>" alt="">';
-  }
   
-  $('#photos').append(allImages);
+ 
         }
         
         </script>
