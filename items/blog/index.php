@@ -47,6 +47,19 @@ $numImages = count($imgNames);
             document.body.appendChild(img);
           }
         }
+        function getRandomSize(min, max) {
+    return Math.round(Math.random() * (max - min) + min);
+  }
+  var numImages = <?php echo $numImages; ?>;
+  var allImages = "";
+  
+  for (var i = 0; i < numImages; i++) {
+    var width = getRandomSize(200, 400);
+    var height =  getRandomSize(200, 400);
+    allImages += '<img src="<?php echo "'$imgFolder$imgNames[$i]'"; ?>" alt="">';
+  }
+  
+  $('#photos').append(allImages);
         </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
