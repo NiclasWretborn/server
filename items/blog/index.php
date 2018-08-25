@@ -15,6 +15,7 @@
 
     closedir($handle);
 }
+echo $imgNames;
 $numImages = count($imgNames);
 ?>
 
