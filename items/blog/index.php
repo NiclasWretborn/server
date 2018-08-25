@@ -46,8 +46,7 @@ $numImages = count($imgNames);
             img.setAttribute('height', '500');
             document.body.appendChild(img);
           }
-        }
-        function getRandomSize(min, max) {
+          function getRandomSize(min, max) {
     return Math.round(Math.random() * (max - min) + min);
   }
   var numImages = <?php echo $numImages; ?>;
@@ -60,6 +59,8 @@ $numImages = count($imgNames);
   }
   
   $('#photos').append(allImages);
+        }
+        
         </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
