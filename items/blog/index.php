@@ -65,8 +65,8 @@ $numImages = count($imgNames);
  
 
   <?php foreach($imgNames as $a){ ?>
-    var width = getRandomSize(200, 400);
-var height =  getRandomSize(200, 400);
+    var width = getRandomSize(10, 20);
+var height =  getRandomSize(10, 20);
 $('#photos').append('<img src="/images/Skog/<?=$a?>" style="width: ' + width + 'px; height: ' + height + 'px;" alt="">');
 
 <?php } ?>
