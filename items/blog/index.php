@@ -66,7 +66,7 @@ $numImages = count($imgNames);
   {
     var width = getRandomSize(200, 400);
 var height =  getRandomSize(200, 400);
-$('#photos').append('<img src="<?php echo "$imgFolder" + "$imgNames[$i]"; ?>" style="width: ' + width + 'px; height: ' + height + 'px;" alt="">');
+$('#photos').append('<img src="<?php echo "$imgFolder $imgNames[$i]"; ?>" style="width: ' + width + 'px; height: ' + height + 'px;" alt="">');
   }
 
 
