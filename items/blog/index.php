@@ -61,7 +61,7 @@ $numImages = count($imgNames);
     $(document).ready(function(){
       var allImages = "";
       var numImages = <?php echo $numImages; ?>;
-        <?php echo $imgNames[2]; ?>;
+       var imgnamez = <?php echo $imgNames[2]; ?>;
   for (i=0; i<numImages; i++)
   {
     var width = getRandomSize(200, 400);
