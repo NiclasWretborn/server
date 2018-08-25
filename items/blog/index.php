@@ -67,7 +67,7 @@ $numImages = count($imgNames);
   <?php foreach($imgNames as $a){ ?>
     var width = getRandomSize(200, 400);
 var height =  getRandomSize(200, 400);
-$('#photos').append('<img src="/mnt/mypassport/images/Skog/'<?=$a?>'" style="width: ' + width + 'px; height: ' + height + 'px;" alt="">');
+$('#photos').append('<img src="/mnt/mypassport/images/Skog/<?=$a?>" style="width: ' + width + 'px; height: ' + height + 'px;" alt="">');
 
 <?php } ?>
 
