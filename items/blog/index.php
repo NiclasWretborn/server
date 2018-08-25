@@ -35,7 +35,7 @@ $numImages = count($imgNames);
               if ($i != 0) echo ", ";
               echo "'$imgFolder$imgNames[$i]'";
             }
-            echo "];\n"
+            echo "];\n";
           ?>
         
   var allImages = "";
