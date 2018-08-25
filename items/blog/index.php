@@ -1,9 +1,9 @@
 <?php
-	$imgFolder = '/mnt/mypassport/images/Skog/';
+	$imgFolder = '/mnt/mypassport/web/root/images/Skog/';
   $imgNames = array();
-  $handle = opendir('/mnt/mypassport/images/Skog/');
+  $handle = opendir('/mnt/mypassport/web/root/images/Skog/');
   
-  if ($handle = opendir('/mnt/mypassport/images/Skog/')) {
+  if ($handle = opendir('/mnt/mypassport/web/root/images/Skog/')) {
 
     while (false !== ($entry = readdir($handle))) {
 
