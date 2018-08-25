@@ -17,6 +17,16 @@
 }
 
 $numImages = count($imgNames);
+for ($i=0; $i<$numImages; $i++)
+{
+  if ($i != 0) echo ", ";
+  echo "'$imgFolder$imgNames[$i]'";
+  <script>
+  var data = [];
+  data.push(<?php echo json_encode($imgFolder$imgNames[$i], JSON_HEX_TAG); ?>;);
+  console.log(data);
+</script>
+}
 ?>
 
 <!doctype html>
@@ -61,23 +71,12 @@ $numImages = count($imgNames);
     $(document).ready(function(){
       var allImages = "";
       var numImages = <?php echo $numImages; ?>;
-      <?php
-      for ($i=0; $i<$numImages; $i++)
-            {
-              if ($i != 0) echo ", ";
-              echo "'$imgFolder$imgNames[$i]'";
-              <script>
-              var data = [];
-              data.push(<?php echo json_encode($imgFolder$imgNames[$i], JSON_HEX_TAG); ?>;);
-              console.log(data);
-</script>
-            }
-            ?>
+ 
   for (i=0; i<numImages; i++)
   {
     var width = getRandomSize(200, 400);
 var height =  getRandomSize(200, 400);
-$('#photos').append('<img src="<?php echo "$imgFolder$imgNames[$i]"; ?>" style="width: ' + width + 'px; height: ' + height + 'px;" alt="">');
+$('#photos').append('<img src="' + data[i] + '" style="width: ' + width + 'px; height: ' + height + 'px;" alt="">');
   }
 
 
