@@ -23,38 +23,12 @@ $numImages = count($imgNames);
 <html lang="en">
 <head>
     <script>
-        function myOnInit()
-        {
-          var numImages = <?php echo $numImages; ?>;
-          var i, imgNames = [];
-          <?php 
-            echo "imgNames[] = [";
-            echo "imgNames = [";
-            for ($i=0; $i<$numImages; $i++)
-            {
-              if ($i != 0) echo ", ";
-              echo "'$imgFolder$imgNames[$i]'";
-            }
-            echo "];\n";
-          ?>
+    
         
-  var allImages = "";
-  
-          for (i=0; i<numImages; i++)
-          {
-            var width = getRandomSize(200, 400);
-    var height =  getRandomSize(200, 400);
-    allImages += '<img src="<?php echo "'$imgFolder$imgNames[$i]'"; ?>" style="width: ' + width + 'px; height: ' + height + 'px;" alt="">';
-          }
-          console.log(allImages);
-          $('#photos').append(allImages);
-          function getRandomSize(min, max) {
-    return Math.round(Math.random() * (max - min) + min);
-  }
-  
+
   
  
-        }
+        
         
         </script>
   <meta charset="utf-8">
@@ -71,7 +45,7 @@ $numImages = count($imgNames);
   <![endif]-->
 </head>
 
-<body onload='myOnInit();'>
+<body>
 
 
 <section id="photos"></section>
@@ -84,8 +58,22 @@ $numImages = count($imgNames);
 
     <script type="text/javascript">
     $(document).ready(function(){
+      var allImages = "";
+  
+  for (i=0; i<numImages; i++)
+  {
+    var width = getRandomSize(200, 400);
+var height =  getRandomSize(200, 400);
+allImages += '<img src="<?php echo "'$imgFolder$imgNames[$i]'"; ?>" style="width: ' + width + 'px; height: ' + height + 'px;" alt="">';
+  }
+  console.log(allImages);
+  $('#photos').append(allImages);
+ 
 
     });
+    function getRandomSize(min, max) {
+return Math.round(Math.random() * (max - min) + min);
+}
     </script>
 
 </body>
