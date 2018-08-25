@@ -61,16 +61,14 @@ $numImages = count($imgNames);
     $(document).ready(function(){
       var allImages = "";
       var numImages = <?php echo $numImages; ?>;
-       var imgnamez = <?php echo $imgNames[2]; ?>;
+       
   for (i=0; i<numImages; i++)
   {
     var width = getRandomSize(200, 400);
 var height =  getRandomSize(200, 400);
-allImages += '<img src="<?php echo "$imgFolder$imgNames[$i]"; ?>" style="width: ' + width + 'px; height: ' + height + 'px;" alt="">';
+$('#photos').append('<img src="<?php echo "$imgFolder$imgNames[$i]"; ?>" style="width: ' + width + 'px; height: ' + height + 'px;" alt="">');
   }
-  console.log(allImages);
-  $('#photos').append(allImages);
- 
+
 
     });
     function getRandomSize(min, max) {
